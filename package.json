@@ -1,0 +1,76 @@
+{
+  "name": "events-manager-api",
+  "description": "An API and UX for managing Visit Seattle events.",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Jay Billings",
+    "email": "jbillings@visitseattle.org"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^8.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "start": "nodemon src/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*"
+    ],
+    "delay": "2500"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^2.1.15",
+    "@feathersjs/authentication-jwt": "^2.0.9",
+    "@feathersjs/authentication-local": "^1.2.9",
+    "@feathersjs/configuration": "^1.0.2",
+    "@feathersjs/errors": "^3.3.4",
+    "@feathersjs/express": "^1.2.7",
+    "@feathersjs/feathers": "^3.2.3",
+    "@feathersjs/socketio": "^3.2.6",
+    "ajv": "^6.5.4",
+    "ajv-keywords": "^3.4.0",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "csvtojson": "^2.0.8",
+    "dotenv": "^5.0.1",
+    "express-fileupload": "^0.4.0",
+    "feathers-authentication-management": "latest",
+    "feathers-findone": "^1.0.2",
+    "feathers-hooks-common": "latest",
+    "feathers-knex": "^3.3.0",
+    "feathers-mailer": "^3.0.1",
+    "feathers-permissions": "^0.2.1",
+    "helmet": "^3.13.0",
+    "knex": "^0.14.6",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "passport-custom": "^1.0.5",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^4.0.6",
+    "tmp": "0.0.33",
+    "uuid": "^3.3.2",
+    "winston": "^2.4.4",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}

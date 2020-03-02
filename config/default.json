@@ -1,0 +1,49 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "clientPort": 3000,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 10000
+  },
+  "sqlite": {
+    "client": "sqlite3",
+    "connection": {
+      "filename": "events_manager.sqlite"
+    }
+  },
+  "smtp": {
+    "host": "0.0.0.0",
+    "port": 1025,
+    "user": "fakesmtpuser",
+    "pass": "fakesmtppass",
+    "insecureTLS": true,
+    "from": "noreply@visitseattle.org",
+    "supportAddress": "helpdesk@visitseattle.org"
+  },
+  "authentication": {
+    "secret": "ed4ab38261e95303ed640b202bdd9121076aa8a3e9bcad37c282ef560ed5e27a290611fd6654fdf65ddee3f231becf0bc0232d21a66a11becc49bd7ef6d8497db5c8cb3e02b0386a34c87d93077faab134802aed42abc8fc1c10e97e1ba7ba97872eec0a4fe823e540a68aaaa4e299c884fc79677a7ccc2b43967b02790f293887f8deacea409ce23d228c26d9ba1926cc26fae25e49fd71ce6bfa624dd561f8c7bbd9054a938015e866e7eee61ecb7c3a3ccd33747dd2caa49da769f4d24c312f5922da8f13b37c6bfdb8c40c1a55bec6ef3087bf2479ad8b07e691d6e2b829428042f3b831f5d355d6b681b2040b8979f4ca517442eaa5cdbd426284704a91",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
+}
